@@ -26,7 +26,7 @@ public class CalificacionDAO extends AbstractDAO<Calificacion>{
      * @param calificacion la Calificacion a agregar.
      */
     @Override
-    protected void save(Calificacion calificacion){
+    public void save(Calificacion calificacion){
         super.save(calificacion);
     }
     
@@ -35,7 +35,7 @@ public class CalificacionDAO extends AbstractDAO<Calificacion>{
      * @param calificacion la Calificacion a actualizar.
      */
     @Override
-    protected void update(Calificacion calificacion){
+    public void update(Calificacion calificacion){
         super.update(calificacion);
     }
     
@@ -44,7 +44,7 @@ public class CalificacionDAO extends AbstractDAO<Calificacion>{
      * @param calificacion la Calificacion eliminar.
      */
     @Override
-    protected void delete(Calificacion calificacion){
+    public void delete(Calificacion calificacion){
         super.delete(calificacion);
     }
     
@@ -53,7 +53,7 @@ public class CalificacionDAO extends AbstractDAO<Calificacion>{
      * @param id el identificador de la Calificacion.
      * @return la Calificacion, null si no está.
      */
-    protected Calificacion find(CalificacionId id){
+    public Calificacion find(CalificacionId id){
         return super.find(Calificacion.class, id);
     }
     
@@ -61,7 +61,7 @@ public class CalificacionDAO extends AbstractDAO<Calificacion>{
      * Busca todas las calificaciones en la base.
      * @return Una lista de todas las calificaciones en la base.
      */
-    protected List<Calificacion> findAll(){
+    public List<Calificacion> findAll(){
         return super.findAll(Calificacion.class);
     }
       
