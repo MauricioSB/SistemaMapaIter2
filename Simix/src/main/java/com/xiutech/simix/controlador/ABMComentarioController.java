@@ -62,5 +62,34 @@ public class ABMComentarioController{
         comentarioUDB.save(coment);
         return "/general/MensajeExitoIH?faces-redirect=true&mensaje=" + mensaje;
     }
-   
+
+    public String editarComentario(int id) {
+        /*1.- Obtener el comentario a editar
+         * 2.-Obtener el texto del comentario
+         * 3.- Cambiar el texto
+         * 4.- Guardar el texto
+        */
+        String mensaje = "Se modifico exitosamente";
+        //busca al comentarista loggeado
+        ComentaristaDAO comentaristaUDB = new ComentaristaDAO();
+        SessionController.UserLogged usuario = (SessionController.UserLogged) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        Comentarista comentarista = comentaristaUDB.find(usuario.getCorreo());
+        //busca el marcador dado el id
+        MarcadorDAO marcadorUDB = new MarcadorDAO();
+        Marcador marcador = marcadorUDB.find(id);
+        //Busca el id del comentario
+        String comModificado = this.texto;
+        //Comentario viejo 
+        Comentario coment = new Comentario();
+        coment.getTexto();
+        coment.setTexto(comModificado);
+        coment.setComentarista(comentarista);
+        coment.setMarcador(marcador);
+        //coment.setId(comentId);                
+        //Se agrega a la base de datos.
+        ComentarioDAO comentarioUDB = new ComentarioDAO ();
+        comentarioUDB.save(coment);
+        return "/general/MensajeExitoIH?faces-redirect=true&mensaje=" + mensaje;
+    }    
+    
 }
