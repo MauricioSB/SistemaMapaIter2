@@ -5,6 +5,10 @@
  */
 package com.xiutech.simix.controlador;
 
+import com.xiutech.simix.modelo.*;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
 /**
  * Clase controlador para calificar comentarios sobre marcadores.
  * @author Mauricio Suarez Barrera
