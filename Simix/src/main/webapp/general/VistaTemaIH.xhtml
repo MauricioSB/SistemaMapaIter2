@@ -57,9 +57,9 @@
                                         <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
                                         <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>
                                         <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
-                                        <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>             
-                                        <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
-                                        <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>             
+                                        <p:commandButton action="#{aBMComentarioController.editarComentario()}" value="Modificar comentario" ajax="false"/>             
+                                        <p:inputTextarea id="comentario" value="#{CalificarComentarioController.calificacion}"  required="true" placeholder="Me Gusta" requiredMessage="Por favor ingresa un comentario"/> <br/>
+                                        <p:commandButton action="#{aBMComentarioController.calificaComentario()}" value="Añadir comentario" ajax="false"/>             
                                         <p:button outcome="/comentarista/AgregarComentarioIH" value="Agregar Comentario">
                                             <f:param name="marcadorId" value="1" />
                                         </p:button>
