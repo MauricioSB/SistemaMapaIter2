@@ -54,9 +54,21 @@
                                         <h:outputText value="Datos útiles" />
                                         <h:outputText value="#{verMarcadores.seleccionado.datosUtiles}" />
                                         
+                                        <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
+                                        <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>
+                                        <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
+                                        <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>             
+                                        <p:inputTextarea id="comentario" value="#{aBMComentarioController.texto}"  required="true" placeholder="Escribe aquí tu cometario" requiredMessage="Por favor ingresa un comentario"/> <br/>
+                                        <p:commandButton action="#{aBMComentarioController.agregaComentario()}" value="Añadir comentario" ajax="false"/>             
                                         <p:button outcome="/comentarista/AgregarComentarioIH" value="Agregar Comentario">
                                             <f:param name="marcadorId" value="1" />
                                         </p:button>
+                                        <p:button outcome="/comentarista/AgregarComentarioIH" value="Modificar Comentario">
+                                            <f:param name="marcadorId" value="2" />
+                                        </p:button>
+                                        <p:button outcome="/comentarista/AgregarComentarioIH" value="Calificar Comentario">
+                                            <f:param name="marcadorId" value="3" />
+                                        </p:button>                                        
                                     </p:panelGrid>
                                 </p:outputPanel>
                             </p:dialog>
